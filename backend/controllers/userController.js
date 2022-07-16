@@ -2,6 +2,7 @@ const jwt = require('jsonwebtoken');
 const bcrypt = require('bcryptjs');
 const asyncHandler = require('express-async-handler');
 const User = require('../models/userModel');
+const { restart } = require('nodemon');
 
 // Generate JWT
 const generateToken = (id) => {
@@ -77,10 +78,16 @@ const loginUser = asyncHandler(async (req, res) => {
 });
 
 // @desc Get user data
-// @route GET /api/users/:id
+// @route GET /api/users/me
 // @access Private
 const getUser = asyncHandler(async (req, res) => {
-  res.json({ message: 'Get user data' });
+  const { _id, name, email } = await User.findById(req.user.id);
+
+  res.status(200).json({
+    id: _id,
+    name,
+    email,
+  });
 });
 
 module.exports = { registerUser, loginUser, getUser };
