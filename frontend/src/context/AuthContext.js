@@ -17,10 +17,10 @@ const authReducer = (state, action) => {
   switch (action.type) {
     case 'RESET':
       return {
-        ...(initialState.isError = false),
-        ...(initialState.isSuccess = false),
-        ...(initialState.isLoading = false),
-        ...(initialState.message = ''),
+        ...(state.isError = false),
+        ...(state.isSuccess = false),
+        ...(state.isLoading = false),
+        ...(state.message = ''),
       };
     default:
       return state;
