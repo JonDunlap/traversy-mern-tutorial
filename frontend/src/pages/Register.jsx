@@ -72,6 +72,12 @@ function Register() {
               onChange={onChange}
             />
           </div>
+          {/* submit button */}
+          <div className='form-group'>
+            <button type='submit' className='btn btn-block'>
+              Submit
+            </button>
+          </div>
         </form>
       </section>
     </>
