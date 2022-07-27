@@ -21,6 +21,22 @@ function Register() {
         </h1>
         <p>Please create an account</p>
       </section>
+
+      <section className='form'>
+        <form>
+          <div className='form-group'>
+            <input
+              type='text'
+              className='form-control'
+              id='name'
+              name='name'
+              value={name}
+              placeholder='Enter your name'
+              onChange={onChange}
+            />
+          </div>
+        </form>
+      </section>
     </>
   );
 }
