@@ -1,7 +1,10 @@
 import { useState, useEffect } from 'react';
+// import { useAuthContext } from '../hooks/useAuthContext';
 import { FaSignInAlt } from 'react-icons/fa';
 
-function Login() {
+function Login(state) {
+  // const { dispatch } = useAuthContext();
+
   const [formData, setFormData] = useState({
     email: '',
     password: '',
@@ -17,6 +20,7 @@ function Login() {
   };
 
   const onSubmit = (e) => {
+    // dispatch({ type: 'RESET' });
     e.preventDefault();
   };
 
