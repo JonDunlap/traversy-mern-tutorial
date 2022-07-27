@@ -56,7 +56,19 @@ function Register() {
               id='password'
               name='password'
               value={password}
-              placeholder='Enter your password'
+              placeholder='Enter password'
+              onChange={onChange}
+            />
+          </div>
+          {/* password2 input */}
+          <div className='form-group'>
+            <input
+              type='password'
+              className='form-group'
+              name='password2'
+              id='password2'
+              value={password2}
+              placeholder='Confirm password'
               onChange={onChange}
             />
           </div>
