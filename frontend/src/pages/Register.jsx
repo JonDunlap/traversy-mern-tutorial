@@ -13,6 +13,10 @@ function Register() {
 
   const onChange = (e) => {};
 
+  const onSubmit = (e) => {
+    e.preventDefault();
+  };
+
   return (
     <>
       <section className='heading'>
@@ -23,7 +27,7 @@ function Register() {
       </section>
 
       <section className='form'>
-        <form>
+        <form onSubmit={onSubmit}>
           {/* name input */}
           <div className='form-group'>
             <input
